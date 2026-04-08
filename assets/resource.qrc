@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/app">
+        <file>images/logo.svg</file>
+        <file>images/logo.ico</file>
+        <file>images/logo.icns</file>
+        <file>images/logo.png</file>
+        <file>images/logo_foxlink_b.png</file>
+        <file>images/wlogo_foxlink_s.png</file>
+        <file>images/line_icon.svg</file>
+        <file>images/network_icon.svg</file>
+        <file>images/station_icon.svg</file>
+        <file>images/uop_icon.svg</file>
+    </qresource>
+</RCC>

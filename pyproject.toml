@@ -1,0 +1,19 @@
+[project]
+name = "MooseUpload"
+version = "1.4.0"
+description = "Moose SMT Upload Tool"
+readme = "README.md"
+requires-python = ">=3.8.10"
+dependencies = [
+    "loguru>=0.7.3",
+    "psutil==7.1.1",
+    "peewee",
+    "watchdog",
+    "PySide6",
+    "PySide6-Fluent-Widgets",
+    "portalocker",
+    "pyinstaller",
+    "toml",
+    "pyftpdlib",
+    "pyarmor>=8.0.0",
+]

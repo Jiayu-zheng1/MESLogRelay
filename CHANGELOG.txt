@@ -1,0 +1,159 @@
+===============================
+ Moose Upload - 变更日志
+===============================
+
+项目名称: MooseUpload
+当前版本: 1.3.4
+生成日期: 2026-02-06
+
+===============================
+
+版本 1.3.4 (2026-02-06)
+------------------------
+- feat: 添加载具码支持和改进SFC连接处理
+  * 新增载具编号(carrier_No)字段到ReflowOven数据模型和数据库表
+  * 更新查询窗口和界面显示载具码列
+  * 添加SFC服务器模块，支持FastAPI接口
+  * 改进SFC连接状态处理，添加连接失败状态
+  * 新增get_SN和API_get_SN方法到SFC连接器
+  * 优化文件监控的解析重试机制
+  * 更新版本号到1.3.4
+  * 移除调试文件和格式化代码
+  * 添加logger异常处理方法
+
+- docs: 更新1.3.4版本变更，同步所有主要功能与优化
+
+- 修复SPI CSV解析和RAW数据转换问题 (2026-01-10)
+  * 修复SPI CSV数据解析的bug
+  * 改进原始数据转换逻辑
+  * 优化数据处理流程
+
+- Add csv import to parse_spi_csv.py (2025-12-30)
+  * 添加CSV导入功能到SPI解析模块
+
+版本 1.3.1 (2025-12-15)
+------------------------  
+- 修复开机自启功能 - 修复跨平台兼容性和保存逻辑问题
+  * 改进自启动功能的跨平台兼容性
+  * 修复配置保存逻辑问题
+  * 增强系统启动时的稳定性
+
+版本 1.2.x (2025-12-13)
+------------------------
+- feat: CSV字段映射、版本管理和多项修复
+  * 实现CSV字段自动映射功能
+  * 改进版本管理机制
+  * 修复多个已知问题
+
+版本 1.1.x (2025-12-10)
+------------------------
+- 更新功能：
+  1. 修改CSV存储路径到与日志相同的基础路径(APP_PATH/CSV)
+  2. 炉温数据按route判断：route!='OK'的单板不生成RAW文件但正常上传SFC
+  3. 表格排序优化：最新数据显示在第一行(顶部)
+  4. 上传任务完善：上传成功/失败后更新数据库upload_status字段
+  5. 修复main.py的exec_()废弃警告
+
+版本 1.0.x 系列 (2025-11-19 - 2025-11-26)
+---------------------------------------
+
+v1.0.15 (2025-11-26)
+- feat: 优化日志记录控制台输出逻辑，确保仅在开发模式或stdout可用时输出
+- 调整应用重启时的延迟和信息提示
+
+v1.0.14 (2025-11-25)  
+- feat: 更新监控路径逻辑，检查路径是否存在并设置错误样式
+- feat: 注释掉解析序列号的返回逻辑，返回空字典以避免错误
+
+v1.0.13 (2025-11-24)
+- feat: 更新FTP服务器管理器的初始化参数，使用常量配置最大连接数和被动端口范围
+- feat: 更新原始数据文件夹路径为FTP_RAW/Data
+- feat: 在重启应用程序时添加退出处理逻辑，以确保资源正确释放
+- feat: 添加状态码属性，根据结果返回对应的状态码；更新AOI_SPI类中的状态码逻辑
+- feat: 添加FTP服务器管理功能；更新原始数据文件夹路径并创建临时目录
+- feat: 重构工站管理，更新工站名称为工站代码；添加原始数据转换器以处理和保存数据
+- feat: 添加配置验证功能，确保监控路径、线别和工站名称的有效性；优化设置窗口的错误提示样式
+
+v1.0.12 (2025-11-22)
+- fix: 修复线程退出检查逻辑；优化属性访问方式以提高代码健壮性
+- feat: 添加监控路径检查和后台服务启动功能；重构TestMonitor类以支持线程管理
+- feat: 更新MooseUpload.spec文件以添加hooks路径；重构FluentMainWindow类为QMainWindow
+- feat: 重构配置管理，添加监控路径设置和自动重启功能；移除不再使用的自动重启和自启动管理器
+- Add logo images in PNG and SVG formats
+- 修复导入路径：将UploadStatus从app.core.enums更改为app.common.enums
+- feat: Implement AOI/SPI data models and UI components
+- feat: Implement Fluent UI for Moose Upload application
+
+v1.0.11 (2025-11-21)
+- 新增设置窗口以支持用户配置；重构设置对话框为设置窗口并添加密码验证功能；更新资源文件以包含新的图标
+- 新增标准标题栏以优化窗口外观；注释掉布局边距设置以便于后续调整
+- Add resource files for application branding
+- 修复解析模式中的正则表达式；更新解析逻辑以正确处理槽位ID；修改主程序以使用新的日志文件路径
+- Refactor and update MooseUpload application
+
+v1.0.10 (2025-11-20)
+- 重构SFCConnector类以使用动态获取的VIP地址；更新TestMonitor类以记录通过的结果并添加到SFC；修改config.py中的操作员ID；更新FluentUI.py中的信息栏显示逻辑；新增SMBUploader类以支持SMB文件上传功能
+- 更新.gitignore，移除uv.lock；修改const.py中的APP_NAME；重构FluentMainWindow类以使用FramelessMainWindow，优化布局和信号连接；新增设置对话框功能以保存用户设置；添加信号总线以支持信息栏显示
+- 更新.gitignore，添加uv.lock；修改pyproject.toml，替换nuitka为pyinstaller；新增Fluent UI界面实现
+
+v1.0.9 (2025-11-19)
+- 重构FluentMainWindow类，使用FramelessWindow以支持无边框设计，并优化布局和信号连接
+- 实现Moose SMT上传的Fluent UI界面
+- 更新.gitignore，添加log/和test.py以优化文件管理
+- Refactor code structure for improved readability and maintainability
+
+===============================
+核心功能模块
+===============================
+
+1. 数据解析模块
+   - AOI/SPI数据解析
+   - 炉温(Reflow)数据解析
+   - CSV文件导入导出
+
+2. SFC集成
+   - 自动SFC上传
+   - 连板条码管理
+   - 载具码支持
+   - SFC服务器接口
+
+3. 用户界面
+   - Fluent Design风格界面
+   - 实时数据监控表格
+   - 设置配置窗口
+   - 查询和导出功能
+
+4. 系统集成
+   - FTP服务器管理
+   - SMB文件挂载
+   - 自启动功能
+   - 日志管理系统
+
+5. 数据存储
+   - SQLite数据库
+   - 自动数据备份
+   - 历史记录查询
+
+===============================
+技术栈
+===============================
+
+- Python 3.12+
+- PySide6 (Qt界面框架)
+- qfluentwidgets (Fluent Design组件)
+- FastAPI (API服务器)
+- SQLite (数据库)
+- Peewee (ORM)
+- Loguru (日志管理)
+- Watchdog (文件监控)
+
+===============================
+维护信息
+===============================
+
+主要开发者: Jiayu Zheng
+项目开始: 2025-11-19
+最后更新: 2026-02-06
+授权协议: 内部项目
+
+===============================
