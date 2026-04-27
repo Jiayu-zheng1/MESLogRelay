@@ -221,8 +221,8 @@ def parse_content(content: str, log_file_path: str) -> Optional[ReflowOven]:
             elif line.startswith("MaxRiseSlope"):
                 vals = line.split()
                 if len(vals) >= 3:
-                    max_rise_slope_upper = vals[1]
-                    max_rise_slope_lower = vals[2]
+                    max_rise_slope_lower = vals[1]
+                    max_rise_slope_upper = vals[2]
                     Logger.info(
                         f"解析到MaxRiseSlope上下限: upper={max_rise_slope_upper}, lower={max_rise_slope_lower}"
                     )

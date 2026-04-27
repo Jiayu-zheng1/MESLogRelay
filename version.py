@@ -5,7 +5,7 @@
 """
 
 # 版本信息
-__version__ = "1.4.3"
+__version__ = "1.4.4"
 __description__ = "Moose Upload"
 __name__ = "MooseUpload"
 
