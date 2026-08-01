@@ -1,7 +1,7 @@
 [project]
-name = "MooseUpload"
+name = "smt-data-collector"
 version = "1.4.4"
-description = "Moose SMT Upload Tool"
+description = "SMT line test data collection, parsing and SFC upload desktop tool"
 readme = "README.md"
 requires-python = ">=3.8.10"
 dependencies = [

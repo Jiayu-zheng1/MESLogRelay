@@ -74,7 +74,7 @@ class Config(QConfig):
     smb_username = ConfigItem("SMB", "SMB Username", "")
     smb_password = ConfigItem("SMB", "SMB Password", "")
     smb_share = ConfigItem("SMB", "SMB Share", "")
-    smb_remote_path = ConfigItem("SMB", "SMB Remote Path", "MooseUpload")
+    smb_remote_path = ConfigItem("SMB", "SMB Remote Path", "smt-data-collector")
 
     station_code = OptionsConfigItem(
         "General",

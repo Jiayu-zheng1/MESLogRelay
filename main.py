@@ -25,10 +25,10 @@ crash_handler = CrashHandler(LOG_PATH)
 crash_handler.setup()
 
 
-app = SingletonApplication(sys.argv, "Moose Upload")
+app = SingletonApplication(sys.argv, "SMT Data Collector")
 app.setAttribute(Qt.AA_DontCreateNativeWidgetSiblings)
-app.setApplicationName("Moose Upload")
-app.setOrganizationName("Moose")
+app.setApplicationName("SMT Data Collector")
+app.setOrganizationName("Foxlink")
 
 app.setStyleSheet("""
 SettingCard[hasError="true"],

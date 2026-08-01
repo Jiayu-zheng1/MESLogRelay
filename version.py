@@ -6,8 +6,8 @@
 
 # 版本信息
 __version__ = "1.4.4"
-__description__ = "Moose Upload"
-__name__ = "MooseUpload"
+__description__ = "SMT Data Collector"
+__name__ = "smt-data-collector"
 
 
 def get_version() -> str:

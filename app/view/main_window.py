@@ -529,7 +529,7 @@ class FluentMainWindow(QMainWindow):
 
     def on_upload_finished(self, result):
         filename = datetime.now().strftime(
-            f"MooseUpload_{cfg.get(cfg.station_code)}_{cfg.get(cfg.type)}_%Y%m%d.csv"
+            f"smt-data-collector_{cfg.get(cfg.station_code)}_{cfg.get(cfg.type)}_%Y%m%d.csv"
         )
         try:
             logger.info(f"on_upload_finished: {result.serial_number}")
@@ -597,8 +597,8 @@ if __name__ == "__main__":
     import sys
 
     app = QApplication(sys.argv)
-    app.setApplicationName("Moose Upload")
-    app.setOrganizationName("Moose")
+    app.setApplicationName("SMT Data Collector")
+    app.setOrganizationName("Foxlink")
 
     # 创建主窗口
     window = FluentMainWindow()

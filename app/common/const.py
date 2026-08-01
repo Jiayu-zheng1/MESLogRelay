@@ -9,7 +9,7 @@ DEBUG = not (
 )
 
 VERSION = get_version()
-APP_NAME = "Moose Upload"
+APP_NAME = "SMT Data Collector"
 SETTINGS_PASSWORD = "123"
 
 if DEBUG:

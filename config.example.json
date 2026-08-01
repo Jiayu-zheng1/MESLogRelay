@@ -25,7 +25,7 @@
     "SMB": {
         "Enable SMB": false,
         "SMB Password": "",
-        "SMB Remote Path": "MooseUpload",
+        "SMB Remote Path": "smt-data-collector",
         "SMB Server": "",
         "SMB Share": "",
         "SMB Username": ""

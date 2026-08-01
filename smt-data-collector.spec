@@ -43,10 +43,10 @@ version_txt = f"""VSVersionInfo(
         [StringStruct('CompanyName', 'Foxlink'),
         StringStruct('FileDescription', '{description}'),
         StringStruct('FileVersion', '{version_str}'),
-        StringStruct('InternalName', 'MooseUpload'),
+        StringStruct('InternalName', 'smt-data-collector'),
         StringStruct('LegalCopyright', '(c) 2025 TE Company'),
-        StringStruct('OriginalFilename', 'MooseUpload.exe'),
-        StringStruct('ProductName', 'Moose Uploader'),
+        StringStruct('OriginalFilename', 'smt-data-collector.exe'),
+        StringStruct('ProductName', 'SMT Data Collector'),
         StringStruct('ProductVersion', '{version_str}')])
       ]),
     VarFileInfo([VarStruct('Translation', [1033, 1200])])
@@ -130,7 +130,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name=f"MooseUpload_v{version_str}",
+    name=f"smt-data-collector_v{version_str}",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
