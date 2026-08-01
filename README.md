@@ -1,8 +1,8 @@
-# Moose SMT Upload Tool 总结
+# smt-data-collector（SMT 产线数据采集上传工具）
 
 ## 软件简介
 
-Moose SMT Upload Tool 是一个用于 SMT 产线测试数据采集、解析、入库、上传与导出的桌面应用。
+smt-data-collector 是一个用于 SMT 产线测试数据采集、解析、入库、上传与导出的桌面应用。
 
 它主要服务 AOI/SPI、Reflow（回流炉）等站点，核心目标是把设备侧日志文件自动转成结构化记录，并对接 SFC 系统完成上传，同时支持本地 CSV 与 RAW 数据产出、FTP 共享与 SMB 挂载写入。
 
