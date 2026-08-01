@@ -1,0 +1,50 @@
+# 配置示例（脱敏）
+# 实际运行时配置保存在本地的 AppData/config.json（由应用首次启动时自动生成，不入库）
+# 复制本文件为 AppData/config.json 并按现场环境填写，或直接在应用设置页配置。
+{
+    "General": {
+        "Auto Start": false,
+        "CSV Path": "",
+        "face": "",
+        "Line Name": "1",
+        "Log Path": "",
+        "Raw_Data Path": "",
+        "Scan SN Path": "",
+        "SFC Result Path": "",
+        "Station Code": "109",
+        "type": "Reflow-109"
+    },
+    "Limits": {
+        "OffsetX_lower": "0",
+        "OffsetX_upper": "12",
+        "OffsetY_lower": "0",
+        "OffsetY_upper": "12",
+        "Volume_lower": "88",
+        "Volume_upper": "112"
+    },
+    "SMB": {
+        "Enable SMB": false,
+        "SMB Password": "",
+        "SMB Remote Path": "MooseUpload",
+        "SMB Server": "",
+        "SMB Share": "",
+        "SMB Username": ""
+    },
+    "SFC": {
+        "IP": "",
+        "FTP Mode": false,
+        "Operator ID": "",
+        "Raw Upload mode": true,
+        "SFC URL": "",
+        "UOP Mode": false
+    },
+    "QFluentWidgets": {
+        "FontFamilies": [
+            "Segoe UI",
+            "Microsoft YaHei",
+            "PingFang SC"
+        ],
+        "ThemeColor": "#ff009faa",
+        "ThemeMode": "Auto"
+    }
+}

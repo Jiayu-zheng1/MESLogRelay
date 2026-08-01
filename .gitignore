@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# 运行时数据（应用启动后自动生成，禁止入库）
+AppData/
+log/
+*.raw
+*.db
+*.log
+
+# 构建产物
+build/
+dist/
+.pyarmor/
+
+# IDE
+.idea/
+.vscode/
+
+# 系统文件
+.DS_Store

@@ -6,6 +6,28 @@ Moose SMT Upload Tool 是一个用于 SMT 产线测试数据采集、解析、�
 
 它主要服务 AOI/SPI、Reflow（回流炉）等站点，核心目标是把设备侧日志文件自动转成结构化记录，并对接 SFC 系统完成上传，同时支持本地 CSV 与 RAW 数据产出、FTP 共享与 SMB 挂载写入。
 
+## 快速开始
+
+### 环境要求
+
+- Python 3.8.10+
+- Windows 10+ / macOS（SMB 挂载依赖系统 `mount_smbfs` / `net use`）
+
+### 安装与启动
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+首次启动后：
+
+1. 在设置页（默认密码 `123`）配置监控目录、站别、SFC 地址与账号、SMB/FTP 参数。
+2. 配置保存在本地 `AppData/config.json`（已 gitignore，不会入库）；结构参考根目录 `config.example.json`。
+3. 开启对应站点的文件监听后，新文件会自动解析、入库并按规则上传/导出。
+
+> 注意：SFC / SMB / FTP 的服务器地址、账号、密码均为现场环境信息，请勿提交到仓库。
+
 ## 核心能力
 
 1. 自动监控指定目录中的新测试文件（基于文件系统事件）。

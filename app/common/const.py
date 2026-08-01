@@ -31,12 +31,12 @@ RAW_COUNT_FILE = APP_PATH / "raw_count.json"
 
 CSV_PATH = "D:\\ReflowLogs\\CSV"
 
-# FTP 服务器默认配置
+# FTP 服务器默认配置（凭据由部署环境配置，不写死）
 FTP_HOST = "0.0.0.0"
 FTP_PORT = 21
 FTP_PASSIVE_PORTS = (60000, 60100)
 FTP_USER = "admin"
-FTP_PASSWORD = "foxlink"
+FTP_PASSWORD = ""
 MAX_CONNECTIONS = 20
 MAX_CONNECTIONS_PER_IP = 5
 
