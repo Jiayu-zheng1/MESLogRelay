@@ -7,6 +7,9 @@ venv/
 env/
 .pytest_cache/
 .mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
 # 运行时数据（应用启动后自动生成，禁止入库）
 AppData/

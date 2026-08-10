@@ -23,7 +23,7 @@ logger = Logger("TestMonitor")
 
 class TestMonitor:
     def __init__(self):
-        logger.info(f"Init TestMonitor")
+        logger.info("Init TestMonitor")
         self.is_running = False
 
         self.sfc_monitor = SFCMonitor(sfc)

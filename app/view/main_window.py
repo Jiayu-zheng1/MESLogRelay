@@ -137,7 +137,7 @@ class FluentMainWindow(QMainWindow):
         self.line_label = StrongBodyLabel("未设置")
 
         self.product_title = CaptionLabel("产品名称")
-        self.product_label = StrongBodyLabel("Moose")
+        self.product_label = StrongBodyLabel("SMT Data Collector")
 
         self.station_title = CaptionLabel("工站名称")
         self.station_label = StrongBodyLabel("未设置")

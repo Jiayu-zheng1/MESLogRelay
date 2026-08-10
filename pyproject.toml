@@ -1,9 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "smt-data-collector"
-version = "1.4.4"
 description = "SMT line test data collection, parsing and SFC upload desktop tool"
 readme = "README.md"
 requires-python = ">=3.8.10"
+# 版本号单一数据源为 version.py，此处动态读取，避免两处手动同步
+dynamic = ["version"]
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Jiayu Zheng" },
+]
+keywords = [
+    "SMT",
+    "AOI",
+    "SPI",
+    "reflow",
+    "data-collector",
+    "PySide6",
+    "qfluentwidgets",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Win32 (MS Windows)",
+    "Environment :: MacOS X",
+    "Intended Audience :: Manufacturing",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: macOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: User Interfaces",
+]
 dependencies = [
     "loguru>=0.7.3",
     "psutil",
@@ -22,3 +57,32 @@ build = [
     "pyinstaller",
     "pyarmor>=8.0.0",
 ]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[project.urls]
+Homepage = "https://github.com/Jiayu-zheng1/smt-data-collector"
+Repository = "https://github.com/Jiayu-zheng1/smt-data-collector"
+Issues = "https://github.com/Jiayu-zheng1/smt-data-collector/issues"
+
+[tool.setuptools]
+# 只打包 app 包与版本模块，main.py/resource.py 等入口文件保留在源码运行
+py-modules = ["version"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.setuptools.dynamic]
+version = { attr = "version.__version__" }
+
+[tool.ruff]
+# 与 README 声明的最低 Python 版本保持一致
+target-version = "py38"
+line-length = 100
+
+[tool.ruff.lint]
+# 关键错误类：语法错误(E9)、未定义/重复名称(F7/F82/F63)
+# 未使用导入(F401)、import * (F403/F405) 等建议性规则暂不启用，欢迎贡献者逐步修复
+select = ["E9", "F63", "F7", "F82"]

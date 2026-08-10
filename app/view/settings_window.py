@@ -695,7 +695,7 @@ class SMBSettingCard(ExpandGroupSettingCard):
         self.username_edit.setPlaceholderText("admin")
         self.username_edit.setText(cfg.get(cfg.smb_username))
         self.password_edit = LineEdit()
-        self.password_edit.setPlaceholderText("foxlink")
+        self.password_edit.setPlaceholderText("请输入密码")
         self.password_edit.setText(cfg.get(cfg.smb_password))
 
         self.smb_share_edit = LineEdit()

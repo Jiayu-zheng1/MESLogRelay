@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
-from app.common.model import Dispensing, Result
-from app.common.database import Dispensing as EncapGlueModel
+from app.common.enums import Result
+from app.common.database import Dispensing
 
 
 def parse_log_file(log_file_path):

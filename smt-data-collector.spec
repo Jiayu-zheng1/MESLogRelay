@@ -44,7 +44,7 @@ version_txt = f"""VSVersionInfo(
         StringStruct('FileDescription', '{description}'),
         StringStruct('FileVersion', '{version_str}'),
         StringStruct('InternalName', 'smt-data-collector'),
-        StringStruct('LegalCopyright', '(c) 2025 TE Company'),
+        StringStruct('LegalCopyright', '(c) 2025 smt-data-collector contributors'),
         StringStruct('OriginalFilename', 'smt-data-collector.exe'),
         StringStruct('ProductName', 'SMT Data Collector'),
         StringStruct('ProductVersion', '{version_str}')])

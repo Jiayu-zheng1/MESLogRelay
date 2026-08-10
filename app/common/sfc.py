@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # 20250313 PengWu
-# v1 适用于一期Moose SFC系统
+# v1 适用于产线 SFC 系统
 
 """
 功能说明:
@@ -13,7 +13,7 @@
 
 参数说明:
     isUopOn          在线/离线模式,True/False
-    url              目前固定为:http://10.53.7.7:8081/Command_Code.asmx/command_code_for_webservice?
+    url              SFC 服务地址，在应用设置页配置（现场环境信息，不入库）
     ip_id            对应的terminal ID,由SFC提供,绑定电脑的IP地址.(IP地址可由SFC指定,指定后就是固定IP,与MAC地址相绑定.)
     usrID            测试员工账号(工号),在上传PASS/FAIL时会上传到SFC,在SFC系统可查询由谁测试.
     pw               测试员工密码,一般与工号相同

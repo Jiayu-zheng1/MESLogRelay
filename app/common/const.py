@@ -26,10 +26,6 @@ LOG_PATH = APP_PATH / "logs"
 LOG_PATH.mkdir(exist_ok=True, parents=True)
 
 RAW_COUNT_FILE = APP_PATH / "raw_count.json"
-# RAW_DATA_FOLDER = Path("D:/AOI Data/Data")
-# RAW_DATA_FOLDER.mkdir(exist_ok=True, parents=True)
-
-CSV_PATH = "D:\\ReflowLogs\\CSV"
 
 # FTP 服务器默认配置（凭据由部署环境配置，不写死）
 FTP_HOST = "0.0.0.0"

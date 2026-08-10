@@ -1,4 +1,18 @@
-# smt-data-collector（SMT 产线数据采集上传工具）
+<p align="center">
+  <img width="64" align="center" src="assets/images/logo.png" alt="logo">
+</p>
+<h1 align="center">smt-data-collector</h1>
+<p align="center">SMT 产线测试数据采集、解析、入库与 SFC 上传桌面工具</p>
+
+<div align="center">
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](#环境要求)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS-lightgrey.svg)]()
+
+</div>
+
+---
 
 ## 软件简介
 
@@ -13,10 +27,17 @@ smt-data-collector 是一个用于 SMT 产线测试数据采集、解析、入�
 - Python 3.8.10+
 - Windows 10+ / macOS（SMB 挂载依赖系统 `mount_smbfs` / `net use`）
 
-### 安装与启动
+### 从源码运行
+
+推荐使用 [uv](https://docs.astral.sh/uv/)（也可以使用 pip）：
 
 ```bash
-pip install -r requirements.txt
+# uv
+uv sync
+uv run python main.py
+
+# pip
+pip install -e .
 python main.py
 ```
 
@@ -97,14 +118,43 @@ python main.py
 ### 打包与发布
 
 - pyinstaller（应用打包）
-- pyarmor（代码保护）
+- pyarmor（代码保护，可选）
 
-## 项目模块概览
+## 项目结构
 
-- app/common：配置、数据库模型、SFC 对接、上传任务、信号总线等核心逻辑。
-- app/components：文件监听处理器、FTP/SMB、RAW 转换、系统托盘、自启与重启管理。
-- app/parsers：AOI/SPI 与 Reflow 日志解析器。
-- app/view：主窗口、设置页、查询页及各站点 UI 组件。
+```
+smt-data-collector/
+├── app/
+│   ├── common/       # 配置、数据库模型、SFC 对接、上传任务、信号总线等核心逻辑
+│   ├── components/   # 文件监听、FTP/SMB、RAW 转换、系统托盘、自启与重启管理
+│   ├── parsers/      # AOI/SPI 与 Reflow 日志解析器
+│   └── view/         # 主窗口、设置页、查询页及各站点 UI 组件
+├── assets/           # 图标与 Qt 资源定义（resource.qrc）
+├── hooks/            # PyInstaller 打包钩子
+├── tests/            # 冒烟测试
+├── main.py           # 应用入口
+├── resource.py       # 由 assets/resource.qrc 生成的 Qt 资源模块（pyside6-rcc）
+├── pyproject.toml    # 项目元数据与依赖（单一数据源）
+└── config.example.json  # 配置示例（脱敏）
+```
+
+> 修改 `assets/resource.qrc` 后，需重新生成资源模块：
+> `pyside6-rcc assets/resource.qrc -o resource.py`
+
+## 开发
+
+```bash
+# 安装开发依赖
+uv sync --extra dev
+
+# 运行测试
+uv run pytest
+
+# 代码检查
+uv run ruff check .
+```
+
+详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 软件定位
 
@@ -113,3 +163,13 @@ python main.py
 - 向下兼容不同设备日志格式。
 - 向上对接 SFC 与追溯体系。
 - 对现场提供可视化、可配置、可恢复的稳定上传能力。
+
+## 文档
+
+- [变更日志](CHANGELOG.md)
+- [贡献指南](CONTRIBUTING.md)
+- [安全说明](SECURITY.md)
+
+## 许可证
+
+[Apache License 2.0](LICENSE)

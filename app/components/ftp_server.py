@@ -19,7 +19,6 @@ from app.common.const import (
     MAX_CONNECTIONS_PER_IP,
 )
 from app.common.logger import Logger
-import threading
 from app.common.config import cfg
 
 logger = Logger("FTPServer")
@@ -245,19 +244,17 @@ def main():
     """命令行入口"""
     parser = argparse.ArgumentParser(description="Mac FTP 服务器")
     parser.add_argument(
-        "--host", default="192.168.48.253", help="服务器监听地址 (默认: 192.168.48.253)"
+        "--host", default="0.0.0.0", help="服务器监听地址 (默认: 0.0.0.0)"
     )
     parser.add_argument(
         "--port", type=int, default=21, help="服务器监听端口 (默认: 21)"
     )
     parser.add_argument("--user", default="admin", help="FTP 用户名 (默认: admin)")
-    parser.add_argument(
-        "--password", default="foxlink", help="FTP 密码 (默认: foxlink)"
-    )
+    parser.add_argument("--password", default="", help="FTP 密码 (默认: 空)")
     parser.add_argument(
         "--directory",
-        default=os.path.expanduser("/vault/AOI Data"),
-        help="共享目录 (默认: /vault/AOI Data)",
+        default=".",
+        help="共享目录 (默认: 当前目录)",
     )
     parser.add_argument(
         "--passive-ports",
