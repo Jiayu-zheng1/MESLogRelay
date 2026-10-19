@@ -21,4 +21,4 @@
 
 # GitHub 自动生成的源码归档（zip/tar）中排除构建脚本
 /build.py export-ignore
-/smt-data-collector.spec export-ignore
+/MESLogRelay.spec export-ignore

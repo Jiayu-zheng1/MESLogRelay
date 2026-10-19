@@ -15,7 +15,7 @@
 
 报告方式：
 
-1. 通过 GitHub 的 [Security Advisories](https://github.com/Jiayu-zheng1/smt-data-collector/security/advisories/new) 提交（推荐，可私密披露）。
+1. 通过 GitHub 的 [Security Advisories](https://github.com/Jiayu-zheng1/MESLogRelay/security/advisories/new) 提交（推荐，可私密披露）。
 2. 或发送邮件至仓库维护者（通过 GitHub 仓库页面获取联系方式）。
 
 请在报告中包含：

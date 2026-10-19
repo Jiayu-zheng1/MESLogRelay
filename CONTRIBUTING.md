@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢您对 smt-data-collector 感兴趣！在提交贡献之前，请阅读以下指南。
+感谢您对 MESLogRelay 感兴趣！在提交贡献之前，请阅读以下指南。
 
 ## 开发环境
 
@@ -8,8 +8,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/Jiayu-zheng1/smt-data-collector.git
-cd smt-data-collector
+git clone https://github.com/Jiayu-zheng1/MESLogRelay.git
+cd MESLogRelay
 
 # 安装依赖（含开发依赖）
 uv sync --extra dev

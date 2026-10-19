@@ -137,7 +137,7 @@ class FluentMainWindow(QMainWindow):
         self.line_label = StrongBodyLabel("未设置")
 
         self.product_title = CaptionLabel("产品名称")
-        self.product_label = StrongBodyLabel("SMT Data Collector")
+        self.product_label = StrongBodyLabel("MESLogRelay")
 
         self.station_title = CaptionLabel("工站名称")
         self.station_label = StrongBodyLabel("未设置")
@@ -529,7 +529,7 @@ class FluentMainWindow(QMainWindow):
 
     def on_upload_finished(self, result):
         filename = datetime.now().strftime(
-            f"smt-data-collector_{cfg.get(cfg.station_code)}_{cfg.get(cfg.type)}_%Y%m%d.csv"
+            f"MESLogRelay_{cfg.get(cfg.station_code)}_{cfg.get(cfg.type)}_%Y%m%d.csv"
         )
         try:
             logger.info(f"on_upload_finished: {result.serial_number}")
@@ -597,7 +597,7 @@ if __name__ == "__main__":
     import sys
 
     app = QApplication(sys.argv)
-    app.setApplicationName("SMT Data Collector")
+    app.setApplicationName("MESLogRelay")
     app.setOrganizationName("Foxlink")
 
     # 创建主窗口

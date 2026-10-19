@@ -3,11 +3,12 @@
 项目版本信息的单一数据源
 注意：修改版本号后，需要同步更新 pyproject.toml
 """
+_is_main = __name__ == "__main__"
 
 # 版本信息
 __version__ = "1.4.4"
-__description__ = "SMT Data Collector"
-__name__ = "smt-data-collector"
+__description__ = "MESLogRelay"
+__name__ = "MESLogRelay"
 
 
 def get_version() -> str:
@@ -36,7 +37,7 @@ def get_name() -> str:
     return __name__
 
 
-if __name__ == "__main__":
+if _is_main:
     print(f"项目名称: {__name__}")
     print(f"版本号: {__version__}")
     print(f"版本元组: {get_version_tuple()}")

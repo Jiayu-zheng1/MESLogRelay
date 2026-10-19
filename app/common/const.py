@@ -9,7 +9,7 @@ DEBUG = not (
 )
 
 VERSION = get_version()
-APP_NAME = "SMT Data Collector"
+APP_NAME = "MESLogRelay"
 SETTINGS_PASSWORD = "123"
 
 if DEBUG:

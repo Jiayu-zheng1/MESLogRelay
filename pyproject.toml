@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "smt-data-collector"
+name = "MESLogRelay"
 description = "SMT line test data collection, parsing and SFC upload desktop tool"
 readme = "README.md"
 requires-python = ">=3.8.10"
@@ -63,9 +63,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Jiayu-zheng1/smt-data-collector"
-Repository = "https://github.com/Jiayu-zheng1/smt-data-collector"
-Issues = "https://github.com/Jiayu-zheng1/smt-data-collector/issues"
+Homepage = "https://github.com/Jiayu-zheng1/MESLogRelay"
+Repository = "https://github.com/Jiayu-zheng1/MESLogRelay"
+Issues = "https://github.com/Jiayu-zheng1/MESLogRelay/issues"
 
 [tool.setuptools]
 # 只打包 app 包与版本模块，main.py/resource.py 等入口文件保留在源码运行

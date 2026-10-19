@@ -1,7 +1,7 @@
 <p align="center">
   <img width="64" align="center" src="assets/images/logo.png" alt="logo">
 </p>
-<h1 align="center">smt-data-collector</h1>
+<h1 align="center">MESLogRelay</h1>
 <p align="center">SMT 产线测试数据采集、解析、入库与 SFC 上传桌面工具</p>
 
 <div align="center">
@@ -16,7 +16,7 @@
 
 ## 软件简介
 
-smt-data-collector 是一个用于 SMT 产线测试数据采集、解析、入库、上传与导出的桌面应用。
+MESLogRelay 是一个用于 SMT 产线测试数据采集、解析、入库、上传与导出的桌面应用。
 
 它主要服务 AOI/SPI、Reflow（回流炉）等站点，核心目标是把设备侧日志文件自动转成结构化记录，并对接 SFC 系统完成上传，同时支持本地 CSV 与 RAW 数据产出、FTP 共享与 SMB 挂载写入。
 
@@ -123,7 +123,7 @@ python main.py
 ## 项目结构
 
 ```
-smt-data-collector/
+MESLogRelay/
 ├── app/
 │   ├── common/       # 配置、数据库模型、SFC 对接、上传任务、信号总线等核心逻辑
 │   ├── components/   # 文件监听、FTP/SMB、RAW 转换、系统托盘、自启与重启管理

@@ -43,10 +43,10 @@ version_txt = f"""VSVersionInfo(
         [StringStruct('CompanyName', 'Foxlink'),
         StringStruct('FileDescription', '{description}'),
         StringStruct('FileVersion', '{version_str}'),
-        StringStruct('InternalName', 'smt-data-collector'),
-        StringStruct('LegalCopyright', '(c) 2025 smt-data-collector contributors'),
-        StringStruct('OriginalFilename', 'smt-data-collector.exe'),
-        StringStruct('ProductName', 'SMT Data Collector'),
+        StringStruct('InternalName', 'MESLogRelay'),
+        StringStruct('LegalCopyright', '(c) 2025 MESLogRelay contributors'),
+        StringStruct('OriginalFilename', 'MESLogRelay.exe'),
+        StringStruct('ProductName', 'MESLogRelay'),
         StringStruct('ProductVersion', '{version_str}')])
       ]),
     VarFileInfo([VarStruct('Translation', [1033, 1200])])
@@ -130,7 +130,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name=f"smt-data-collector_v{version_str}",
+    name=f"MESLogRelay_v{version_str}",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

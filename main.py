@@ -25,9 +25,9 @@ crash_handler = CrashHandler(LOG_PATH)
 crash_handler.setup()
 
 
-app = SingletonApplication(sys.argv, "SMT Data Collector")
+app = SingletonApplication(sys.argv, "MESLogRelay")
 app.setAttribute(Qt.AA_DontCreateNativeWidgetSiblings)
-app.setApplicationName("SMT Data Collector")
+app.setApplicationName("MESLogRelay")
 app.setOrganizationName("Foxlink")
 
 app.setStyleSheet("""

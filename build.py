@@ -107,7 +107,7 @@ def build_with_pyinstaller():
         "pyinstaller",
         "-y",
         "--clean",
-        "smt-data-collector.spec",
+        "MESLogRelay.spec",
     ]
 
     step_start = time.time()
@@ -138,7 +138,7 @@ def verify_build():
 
 if __name__ == "__main__":
     try:
-        logger.info("\n" + "🏗️  开始构建 smt-data-collector" + "\n")
+        logger.info("\n" + "🏗️  开始构建 MESLogRelay" + "\n")
         start_time = time.time()
 
         # 清理构建目录
