@@ -1,0 +1,41 @@
+from pathlib import Path
+import sys
+from PySide6.QtCore import QStandardPaths
+from version import get_version
+
+DEBUG = not (
+    "__compiled__" in globals()  # Nuitka
+    or getattr(sys, "frozen", False)  # PyInstaller
+)
+
+VERSION = get_version()
+APP_NAME = "MESLogRelay"
+SETTINGS_PASSWORD = "123"
+
+if DEBUG:
+    APP_PATH = Path("AppData").absolute()
+else:
+    APP_PATH = (
+        Path(QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)) / APP_NAME
+    )
+
+CONFIG_FILE = APP_PATH / "config.json"
+DB_PATH = APP_PATH / "database.db"
+
+LOG_PATH = APP_PATH / "logs"
+LOG_PATH.mkdir(exist_ok=True, parents=True)
+
+RAW_COUNT_FILE = APP_PATH / "raw_count.json"
+
+# FTP 服务器默认配置
+FTP_HOST = "0.0.0.0"
+FTP_PORT = 21
+FTP_PASSIVE_PORTS = (60000, 60100)
+FTP_USER = "admin"
+FTP_PASSWORD = "123"
+MAX_CONNECTIONS = 20
+MAX_CONNECTIONS_PER_IP = 5
+
+
+def GET_VERSION():
+    return VERSION

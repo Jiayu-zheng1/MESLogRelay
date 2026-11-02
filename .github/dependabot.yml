@@ -1,0 +1,14 @@
+# 依赖自动更新配置
+# 文档: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot-github-actions-api
+version: 2
+updates:
+  - package-ecosystem: "pip" # uv/pip 共用 pyproject.toml 与 uv.lock
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
